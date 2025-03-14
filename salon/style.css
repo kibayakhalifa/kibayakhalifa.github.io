@@ -645,7 +645,7 @@ header {
 }
 /* Contact Section */
 .contact {
-    padding: 60px 20px;
+    padding: 60px 20px 20px;
     background-color: #333;
     color: #fff;
     text-align: center;
@@ -727,37 +727,6 @@ header {
     color: #ff6f61;
 }
 
-/* Footer */
-.footer {
-    margin-top: 40px;
-    padding: 20px;
-    background-color: #222;
-    color: #fff;
-    text-align: center;
-}
-
-.footer p {
-    margin: 0;
-    font-size: 1rem;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .contact-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .contact-info,
-    .quick-links,
-    .social-media {
-        text-align: center;
-    }
-
-    .social-media ul {
-        justify-content: center;
-    }
-}
 /* Salon Description */
 .salon-description {
     flex: 1 1 100%;
@@ -780,13 +749,92 @@ header {
     margin: 0 auto;
 }
 
+/* Footer */
+.footer {
+    margin-top: 0;
+    padding: 20px;
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
+    .contact {
+        padding: 30px 20px 10px; /* Reduced padding for mobile */
+    }
+
+    .contact-title {
+        font-size: 2rem;
+        margin-bottom: 15px; /* Reduced margin */
+    }
+
+    .contact-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px; /* Reduced gap between elements */
+    }
+
     .salon-description {
-        text-align: left;
+        margin-bottom: 15px; /* Reduced margin */
+    }
+
+    .salon-description h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px; /* Reduced margin */
     }
 
     .salon-description p {
         font-size: 1rem;
     }
-}        
+
+    .contact-info,
+    .quick-links,
+    .social-media {
+        margin-bottom: 10px; /* Reduced margin between sections */
+    }
+
+    .contact-info h3,
+    .quick-links h3,
+    .social-media h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px; /* Reduced margin */
+    }
+
+    .contact-info ul li,
+    .quick-links ul li,
+    .social-media ul li {
+        font-size: 1rem;
+        margin-bottom: 5px; /* Reduced margin between list items */
+    }
+
+    .social-media ul {
+        gap: 10px; /* Reduced gap between social media icons */
+    }
+
+    /* Specific adjustments for spacing */
+    .contact-info {
+        margin-bottom: 5px; /* Reduced space below Get in Touch */
+    }
+
+    .quick-links {
+        margin-bottom: 5px; /* Reduced space below Quick Links */
+    }
+
+    .social-media {
+        margin-bottom: 5px; /* Reduced space below Follow Us */
+    }
+
+    .footer {
+        padding: 10px; /* Reduced padding for mobile */
+    }
+
+    .footer p {
+        font-size: 0.9rem;
+    }
+}
