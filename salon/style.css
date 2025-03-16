@@ -590,35 +590,32 @@ header {
 .responsive-iframe-container {
     position: relative;
     width: 100%;
-    padding-top: 56.25%; /* This creates a 16:9 aspect ratio (height/width * 100) */
-    overflow: hidden;
-    
-}
-
-.responsive-iframe-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; /* Adjust this value to make the widget smaller */
-    height: 80%; /* Adjust this value to make the widget smaller */
-    border: 3px solid #333; 
-    margin: 0 auto; /* Center the iframe horizontally */
-    display: block; /* Remove default inline styling */
+    max-width: 600px;
+    margin: 0 auto;
+    border: 3px solid #333;
     border-radius: 10px;
+    overflow: hidden; /* Prevent content from overflowing the border */
 }
 
-/* Adjust the size for smaller screens */
+/* Ensure the iframe fills the container */
+.responsive-iframe-container iframe {
+    width: 100%;
+    height: 500px;
+    display: block;
+    border: none; /* Remove internal iframe border if present */
+}
+
+/* Adjust for medium-sized screens */
 @media (max-width: 768px) {
     .responsive-iframe-container iframe {
-        width: 90%; /* Adjust this value for smaller screens */
-        height: 90%; /* Adjust this value for smaller screens */
+        height: 450px;
     }
 }
 
+/* Adjust for small screens */
 @media (max-width: 480px) {
     .responsive-iframe-container iframe {
-        width: 95%; /* Adjust this value for very small screens */
-        height: 95%; /* Adjust this value for very small screens */
+        height: 400px;
     }
 }
 
