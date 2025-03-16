@@ -587,6 +587,40 @@ header {
     color: #555;
     margin-bottom: 30px;
 }
+.responsive-iframe-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* This creates a 16:9 aspect ratio (height/width * 100) */
+    overflow: hidden;
+    
+}
+
+.responsive-iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Adjust this value to make the widget smaller */
+    height: 80%; /* Adjust this value to make the widget smaller */
+    border: 3px solid #333; 
+    margin: 0 auto; /* Center the iframe horizontally */
+    display: block; /* Remove default inline styling */
+    border-radius: 10px;
+}
+
+/* Adjust the size for smaller screens */
+@media (max-width: 768px) {
+    .responsive-iframe-container iframe {
+        width: 90%; /* Adjust this value for smaller screens */
+        height: 90%; /* Adjust this value for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .responsive-iframe-container iframe {
+        width: 95%; /* Adjust this value for very small screens */
+        height: 95%; /* Adjust this value for very small screens */
+    }
+}
 
 .calendly-inline-widget {
     margin-top: 40px;
@@ -810,7 +844,7 @@ header {
     .quick-links ul li,
     .social-media ul li {
         font-size: 1rem;
-        margin-bottom: 5px; /* Reduced margin between list items */
+        margin-bottom: 10px; /* Reduced margin between list items */
     }
 
     .social-media ul {
